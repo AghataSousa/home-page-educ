@@ -1,0 +1,269 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-head{
+    width: 95%;
+    margin: 0 0 0 auto;
+}
+
+nav{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-direction: row;
+     min-height: 10vh;
+     width: 60%;
+     flex-wrap: wrap;
+}
+
+nav .logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex: 1 1 10rem;
+}
+.logo img{
+    width: 8vh;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex: 1 1 40rem;
+    list-style-type: none;
+}
+
+nav ul a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: black;
+}
+nav ul a:hover{
+    background: black;
+    color: white;
+    padding: 0.6rem;
+    border-radius: 1rem;
+}
+
+h1{
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.intro{
+    min-height: 80vh;/* atenção tamanho da tela em 90*/
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+h2{
+    font-size: 3.5rem;
+    padding-top: 2rem;
+    display: inline-block;
+}
+
+h3{
+    font-size: 2rem;
+    padding: 1rem 0rem;
+}
+
+.intro-text p{
+    padding: 0.3rem;
+    font-size: 1.3rem;
+}
+
+.splash{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 100%;
+    z-index: -1;
+}
+
+.intro-social{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+.intro-social, a{
+    margin-right: 1.5rem;
+   
+}
+
+button{
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+    background: #6B78A6;
+    color: white;
+    width: 15rem;
+    border-radius: 1rem;
+    
+}
+
+button:hover{
+    border: 2px solid black;
+}
+/*
+.intro-images svg{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 100%;
+}
+*/
+.intro-text, .intro-images{
+    flex: 1 1 30rem;
+}
+
+#folha-cima-direita{
+   animation: folha-cima 1.5s ease infinite alternate
+}
+#folha-baixo-esquerda{
+    animation: folha-baixo 1.5s ease infinite alternate
+}
+
+#planta{
+    animation: planta 2s ease infinite alternate
+}
+
+@keyframes folha-cima{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(25%);
+    }
+}
+
+@keyframes folha-baixo{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(-25%);
+    }
+}
+
+@keyframes planta{
+    from{
+       transform: translateY(0%) rotateX(10deg)
+    }
+    to{
+        transform: translateY(5%);
+    }
+}
+
+/*perfis*/
+.perfis{
+    background: #344F5F;
+    color: white;
+    padding: 3rem;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.perfis h3{
+    padding: 1rem;
+}
+
+.cards{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 70vh;
+    flex-wrap: wrap;
+}
+.card{
+    text-align: center;
+    flex: 1 1 25rem;
+    min-height: 40vh;
+    margin: 2rem 5rem;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.2),  0px 20px 20px rgba(0,0,0,0.2);
+}
+
+.card h4{
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+.card p{
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+.card-foto{
+    background: #344F5F;
+}
+
+.card img{
+    height: 100px;
+    padding: 2vh;
+}
+footer{
+    background:#344F5F ;
+    color: white;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+footer h4{
+    padding: 2rem;
+    font-size: 1.1rem;
+}
+
+/*Mobile*/
+@media screen and (max-width: 1297px){
+    svg{
+        width: 100%;
+    }
+    nav{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1065px){
+    svg{
+        width: 100%;
+    }
+    .intro-text, .intro-images{
+        flex: 1 1 10rem;
+    }
+}
+
+@media screen and (max-width: 665px){
+    svg{
+        width: 100%;
+    }
+    .splash{
+        display: none;
+    }
+}
+@media screen and (max-width: 560px){
+    .intro-text, .intro-images{
+        flex: 1 1 15rem;
+    }
+    svg{
+        height: 60%;
+    }
+}
